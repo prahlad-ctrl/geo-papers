@@ -63,8 +63,7 @@ def train_node2vec(walks: list[list[str]], embed_dim = 64, window = 5, workers =
                      negative = 0,
                      min_count = 1,
                      workers=workers,
-                     epochs=epochs,
-                     seed = 42)
+                     epochs=epochs)
     
     return model
 
@@ -97,10 +96,7 @@ def visualise(embed: np.ndarray, labels: list[str]):
  
     plt.savefig('img', dpi=150, bbox_inches="tight")    
         
-def main():
-    random.seed(42)
-    np.random.seed(42)
-    
+def main():  
     G = kar_graph()
     walks = generate_walks(G, num_walks=10, walk_length=40, p=1.0, q=0.5) # when p = q = 1, it acts as normal deepwalk
     model = train_node2vec(walks, embed_dim=64, window=5, workers=5, epochs=5)
