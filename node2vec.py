@@ -1,3 +1,8 @@
+'''
+node2vec: Scalable Feature Learning for Networks -
+https://arxiv.org/abs/1607.00653
+'''
+
 import numpy as np
 import networkx as nx
 import random

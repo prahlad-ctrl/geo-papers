@@ -1,3 +1,9 @@
+'''
+Planetoid: Inductive Representation Learning on Large Graphs -
+https://arxiv.org/abs/1706.02216
+'''
+
+
 import numpy as np
 import torch
 from torch import nn

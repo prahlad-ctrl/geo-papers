@@ -1,3 +1,9 @@
+'''
+DeepWalk: Online Learning of Social Representations -
+https://arxiv.org/abs/1403.6652
+'''
+
+
 import numpy as np
 import networkx as nx
 import random
