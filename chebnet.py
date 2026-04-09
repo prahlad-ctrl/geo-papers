@@ -116,7 +116,7 @@ class ChebConv(nn.Module):
         if self.K > 1:
             out += Tx_prev1 @ self.weight[1]
             
-        for k in range(2, self.k):
+        for k in range(2, self.K):
             Tx_curr = 2*(L_scaled @ Tx_prev1) - Tx_prev2
             out += Tx_curr @ self.weight[k]
             Tx_prev2, Tx_prev1 = Tx_prev1, Tx_curr # recurrence shift window
